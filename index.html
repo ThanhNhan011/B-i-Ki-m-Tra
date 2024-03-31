@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <style>
+        /* Định dạng chung */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        /* Khung đăng nhập */
+        .khung-dang-nhap {
+            margin: 20px auto;
+            width: 300px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        /* Tiêu đề */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 0;
+        }
+        
+        /* Nhãn thông tin */
+        .nhan {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Ô nhập liệu */
+        .o-nhap-lieu {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        
+        /* Nút đăng nhập */
+        .nut-dang-nhap {
+            background-color: #000;
+            color: #fff;
+            width: 100px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        
+        /* Link quên mật khẩu */
+        .quen-mat-khau {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+    </style>
+  </head>
+<body>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <div class="khung-dang-nhap">
+        <h1>ĐĂNG NHẬP</h1>
+        <p class="nhan">Tên đăng nhập:</p>
+        <input class="o-nhap-lieu" type="text" name="ten-dang-nhap">
+        <p class="nhan">Mật khẩu:</p>
+        <input class="o-nhap-lieu" type="password" name="mat-khau">
+        <a class="dang-ki" href="#">Đăng Kí </a>
+        <a class="quen-mat-khau" href="#">Quên mật khẩu?</a>
+        <br>
+        <button class="nut-dang-nhap">ĐĂNG NHẬP</button>
+    </div>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đồng hồ</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        
+        #clock {
+            width: 100%;
+            height: 50px;
+            border: 1px solid #aaa;
+            margin: 20px auto;
+            position: relative;
+        }
+        
+        #time {
+            font-size: 20px;
+            font-weight: bold;
+            color: #;
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        #progress {
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        <div id="time"></div>
+        <div id="progress"></div>
+    </div>
+    <script>
+        const time = document.getElementById("time");
+        const progress = document.getElementById("progress");
+        
+        function updateTime() {
+            const date = new Date();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const seconds = date.getSeconds();
+            
+            time.textContent = `${hours}:${minutes}:${seconds}`;
+            
+            const progressWidth = (seconds / 60) * 100;
+            progress.style.width = `${progressWidth}%`;
+        }
+        
+        setInterval(updateTime, 1000);
+        
+        updateTime();
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đánh giá</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        
+        .danh-gia {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .danh-gia .ten-nguoi-dung {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .danh-gia .noi-dung-gop-y {
+            margin-bottom: 5px;
+        }
+        
+        .danh-gia .ngay-gop-y {
+            font-size: 12px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>ĐÁNH GIÁ</h2>
+    
+    <div class="danh-gia">
+        <p class="ten-nguoi-dung">Dương Thành Nhân</p>
+        <p class="noi-dung-gop-y">Sản phẩm rất tốt, chất lượng cao, giá cả hợp lý. Tôi rất hài lòng.</p>
+        <p class="ngay-gop-y">17/03/2024</p>
+    </div>
+    
+    <div class="danh-gia">
+        <p class="ten-nguoi-dung">Phan Minh Tài</p>
+        <p class="noi-dung-gop-y">Sản phẩm đẹp, giao hàng nhanh chóng. Tuy nhiên, dịch vụ khách hàng cần cải thiện.</p>
+        <p class="ngay-gop-y">21/03/2024</p>
+    </div>
+  
+    <div class="danh-gia">
+        <p class="ten-nguoi-dung">Nguyễn Chí Phúc</p>
+        <p class="noi-dung-gop-y">Không biết mọi người sao chứ mình thấy những sản phẩm được bày bán ở shop này vô cùng chất lượng và giá cả lại hợp lý lắm luôn á. Mua được với giá ưu đãi thích lắm.</p>
+        <p class="ngay-gop-y">29/03/2024</p>
+    </div>
+    
+    </body>
+</html>
+</body>
+</html>
